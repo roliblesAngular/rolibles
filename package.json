@@ -7,7 +7,7 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "build:lib": "ng-packgr -p projects/rolibles-lib/ng-package.json"
+    "build:lib": "ng-packagr -p projects/rolibles-lib/ng-package.json"
   },
   "private": true,
   "dependencies": {
