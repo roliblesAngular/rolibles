@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import * as moment from 'moment'
 
 @Component({
-  selector: 'lkn-calendar',
+  selector: 'rolibles-lib',
   templateUrl: './rolibles-lib.component.html',
   styleUrls: ['./rolibles-lib.component.css']
 })
