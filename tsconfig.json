@@ -11,6 +11,16 @@
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "es2015",
+    "paths": {
+      "rolibles-lib": [
+        "dist/rolibles-lib/rolibles-lib",
+        "dist/rolibles-lib"
+      ],
+      "rolibles-library": [
+        "dist/rolibles-library/rolibles-library",
+        "dist/rolibles-library"
+      ]
+    },
     "module": "es2020",
     "lib": [
       "es2018",

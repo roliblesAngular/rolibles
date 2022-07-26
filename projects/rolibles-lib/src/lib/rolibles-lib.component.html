@@ -1,0 +1,24 @@
+<div class="container-calendar">
+  <div class="header-calendar" *ngIf="_eventsFullYear.length > 0">
+      <div class="buttons-change-year">
+          <!-- <lkn-select-year (changeYearEmit)="setAllMonths($event, true)" [selectYear]="selectedYear"></lkn-select-year> -->
+      </div>
+      <button class=" btn  " (click)="changeYear(-1)">Anterior</button>
+      <button  class="btn"   (click)="changeYear(1)" >Siguiente</button>
+  </div>
+  <div id="containers-months">
+      <div *ngFor="let year of arrayMonths" class="calendar">
+          <span style="font-size:10px">{{year.month.name | date:'MMMM, yyyy'}}</span>
+          <ol>
+              <li *ngFor="let day of week" class="day-name">{{day | slice:0:3}}</li>
+              <li [style.gridColumnStart]="first ? day?.indexWeek : 'auto'"
+                  *ngFor="let day of year.days;let first = first">
+                  <span
+                  [style.color]="day.selected? 'white' : ''" 
+                  [style.background-color]="day.selected? 'var(--primary_7)' : ''" class="span-day">{{day?.value}}</span>
+              </li>
+          </ol>
+      </div>
+  </div>
+
+</div>

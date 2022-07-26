@@ -3,5 +3,86 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "rolibles-library": {
+      "projectType": "library",
+      "root": "projects/rolibles-library",
+      "sourceRoot": "projects/rolibles-library/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/rolibles-library/tsconfig.lib.json",
+            "project": "projects/rolibles-library/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/rolibles-library/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/rolibles-library/src/test.ts",
+            "tsConfig": "projects/rolibles-library/tsconfig.spec.json",
+            "karmaConfig": "projects/rolibles-library/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/rolibles-library/tsconfig.lib.json",
+              "projects/rolibles-library/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "rolibles-lib": {
+      "projectType": "library",
+      "root": "projects/rolibles-lib",
+      "sourceRoot": "projects/rolibles-lib/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/rolibles-lib/tsconfig.lib.json",
+            "project": "projects/rolibles-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/rolibles-lib/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/rolibles-lib/src/test.ts",
+            "tsConfig": "projects/rolibles-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/rolibles-lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/rolibles-lib/tsconfig.lib.json",
+              "projects/rolibles-lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "rolibles-library"
 }
