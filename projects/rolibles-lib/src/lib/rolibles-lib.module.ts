@@ -14,7 +14,8 @@ import { SelectYearComponent } from './components/select-year/select-year.compon
     CommonModule
   ],
   exports: [
-    RoliblesLibComponent
+    RoliblesLibComponent,
+    SelectYearComponent
   ]
 })
 export class RoliblesLibModule { }
