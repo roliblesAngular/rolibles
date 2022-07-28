@@ -1,0 +1,10 @@
+<i class="icon-calendar" (click)="openDropdown = !openDropdown" [style.color]="openDropdown ? 'var(--primary_7)': ''"></i>
+<div id="container-dropdonw" *ngIf="openDropdown" (mouseleave)="openDropdown = false">
+    <div id="container-list-year">
+        <div class="left" (click)="nextBackYear(-1)"> <i class="icon-arrow--left icon--arrow"></i> </div>
+        <div class="header"><strong>{{years[0] + ' - ' + years[years.length - 1]}}</strong></div>
+        <div class="right" (click)="nextBackYear(1)"><i class="icon-arrow--right icon--arrow"></i></div>
+
+        <span class="tag-year" *ngFor="let year of years"  (click)="changeYear(year)">{{year}}</span>
+    </div>
+</div>

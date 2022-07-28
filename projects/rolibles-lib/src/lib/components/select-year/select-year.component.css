@@ -1,0 +1,63 @@
+.header {
+    grid-area: header;
+}
+.left {
+    grid-area: left;
+}
+.right {
+    grid-area: right;
+}
+
+i {
+    font-size: 20px;
+}
+
+.left,
+.right,
+i {
+    cursor: pointer;
+}
+
+.left:hover,
+.right:hover,
+i:hover {
+    color: var(--primary_7);
+}
+
+#container-dropdonw {
+    width: 100%;
+    top: 20px;
+    position: relative;
+   
+       
+}
+
+#container-list-year {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas:
+        "left header header header right"
+        "tag-year tag-year tag-year tag-year tag-year";
+    background: #F5F5F5;
+    overflow: hidden;
+    padding: 5px;
+    position: absolute;
+    left: -50px;
+
+}
+
+.tag-year {
+    border: 1px solid #dfdfdf;
+    padding: 2px;
+    cursor: pointer;
+    margin: 2px;
+    border-radius: 5px;
+    border: 1px solid #dfdfdf;
+    background: white;
+}
+
+.tag-year:hover {
+    border-color:var(--primary);
+    background: var(--primary_7);
+    color: white;
+}
